@@ -19,3 +19,6 @@
 --type-set=svg=.svg
 --type-set=ts=.ts
 --type-set=style=.scss,.sass,.styl,.less,.css
+--type-set=go=.go
+--type-set=yaml=.yaml, .yml
+--type-set=java=.java, .properties

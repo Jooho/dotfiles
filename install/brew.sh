@@ -13,8 +13,8 @@ brew install tree
 brew install wget
 
 # development server setup
-brew install nginx
-brew install dnsmasq
+#brew install nginx
+#brew install dnsmasq
 
 # development tools
 brew install git
@@ -27,6 +27,7 @@ brew install highlight
 brew install nvm
 brew install z
 brew install markdown
+brew install go
 
 # install neovim
 brew install neovim/neovim/neovim

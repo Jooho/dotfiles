@@ -8,13 +8,16 @@ else # OS X `ls`
     colorflag="-G"
 fi
 
-alias vim="nvim"
+#alias vim="nvim"
 
 # Filesystem aliases
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+
+# openshift
+alias sme="cd /Volumn/jetDrive/Dropbox/IT/Openshift/3/SME_LIST"
 
 alias l="ls -lah ${colorflag}"
 alias la="ls -AF ${colorflag}"

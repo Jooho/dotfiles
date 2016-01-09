@@ -16,22 +16,34 @@ if [ "$(uname)" == "Darwin" ]; then
     echo "Updating OSX settings"
     source installosx.sh
 
-    echo "Installing node (from nvm)"
-    source install/nvm.sh
+#    echo "Installing node (from nvm)"
+#    source install/nvm.sh
 
-    echo "Configuring nginx"
-    # create a backup of the original nginx.conf
-    mv /usr/local/etc/nginx/nginx.conf /usr/local/etc/nginx/nginx.original
-    ln -s ~/.dotfiles/nginx/nginx.conf /usr/local/etc/nginx/nginx.conf
-    # symlink the code.dev from dotfiles
-    ln -s ~/.dotfiles/nginx/code.dev /usr/local/etc/nginx/sites-enabled/code.dev
+
+elif [ "$(uname)" == "Linux" ]; then
+    if [ "$(uname -a|grep fc)" ]; then
+	echo "Running on Fedora"
+
+        echo "dnf install all the things"
+        source install/fedora.sh
+
+       # echo "Updating Fedora settings"
+       # source install_fedora.sh
+      
+        echo "Installing node (from nvm)"
+        source install/nvm_fedora.sh
+      
+    fi
+
 fi
 
 echo "creating vim directories"
 mkdir -p ~/.vim-tmp
+cp -R vim/vim.symlink/* ~/.vim/
 
 
 echo "Configuring zsh as default shell"
 chsh -s $(which zsh)
 
 echo "Done."
+
