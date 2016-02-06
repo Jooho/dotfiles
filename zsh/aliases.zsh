@@ -18,6 +18,13 @@ alias .....="cd ../../../.."
 
 # openshift
 alias sme="cd /Volumn/jetDrive/Dropbox/IT/Openshift/3/SME_LIST"
+alias mgit="cd ~/dev/git/mine"
+
+# KVM provision for ose
+alias kclone="/home/jooho/dev/git/mine/rhep_tools/ose_kvm_provision/ose_kvm_provison.sh -mode=clone -arch=min"
+alias ktem="/home/jooho/dev/git/mine/rhep_tools/ose_kvm_provision/ose_kvm_provison.sh -mode=template -arch=min"
+alias kclean="/home/jooho/dev/git/mine/rhep_tools/ose_kvm_provision/ose_kvm_provison.sh -mode=clean -arch=min"
+alias kforce="/home/jooho/dev/git/mine/rhep_tools/ose_kvm_provision/ose_kvm_provison.sh -mode=force -arch=min"
 
 alias l="ls -lah ${colorflag}"
 alias la="ls -AF ${colorflag}"
@@ -31,7 +38,6 @@ alias df='df -h' # disk free, in Gigabytes, not bytes
 alias du='du -h -c' # calculate disk usage for a folder
 
 # Applications
-alias ios='open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
 # IP addresses
 #alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
